@@ -7,6 +7,7 @@ df = conn.read()
 
 st.title("🏆 Inscrição nos Clubes Juvenis")
 
+# Isso cria as abas automáticas por sala
 if 'Turma' in df.columns:
     turmas = sorted(df['Turma'].dropna().unique())
     abas = st.tabs(turmas)
